@@ -4,11 +4,18 @@
     "strict": true,
     "skipLibCheck": true,
     "jsx": "react",
-    "declaration": true,
-    "sourceMap": true,
-    "declarationDir": "types",
+    "isolatedModules": true,
     "outDir": "dist",
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true
-  }
+    "allowSyntheticDefaultImports": true,
+
+    // Declaration
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "dist",
+    "emitDeclarationOnly": true
+  },
+  "files": [
+    "src/index.ts"
+  ]
 }
