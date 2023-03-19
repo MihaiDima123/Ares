@@ -1,7 +1,8 @@
 import React from 'react';
+import { Button } from "@mihaidima/ares";
 
 export default () => (
     <div>
-        Hello
+        <Button label={"label"} />
     </div>
 );

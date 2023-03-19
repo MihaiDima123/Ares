@@ -12,12 +12,14 @@ yarn-error.log*
 build/Release
 
 # Dependency directories
+client/node_modules/
+client/package-lock.json
 node_modules/
 jspm_packages/
 
 # Distribution directories
 dist/
-client-dist/
+client/client-dist/
 build/
 client-build/
 
