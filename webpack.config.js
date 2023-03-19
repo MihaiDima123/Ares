@@ -4,7 +4,7 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.js', '.json', '.tsx']
     },
-    entry: './src/index.tsx',
+    entry: './src/index.ts',
     module: {
         rules: [
             {
@@ -19,5 +19,6 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
+        library: "ares"
     }
 };

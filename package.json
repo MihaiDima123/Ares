@@ -1,8 +1,11 @@
 {
-  "name": "ares",
-  "version": "1.0.0",
+  "name": "@mihaidima/ares",
+  "version": "1.0.9",
   "description": "A nice component library -_*",
-  "main": "index.js",
+  "main": "dist/bundle.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "start": "webpack serve --mode production --config webpack.config.client.js"
   },
@@ -26,5 +29,8 @@
     "webpack": "^5.76.1",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "@mihaidima/ares": "^1.0.9"
   }
 }

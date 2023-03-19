@@ -5,10 +5,10 @@
     "skipLibCheck": true,
     "jsx": "react",
     "declaration": true,
+    "sourceMap": true,
     "declarationDir": "types",
     "outDir": "dist",
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "emitDeclarationOnly": true,
+    "allowSyntheticDefaultImports": true
   }
 }

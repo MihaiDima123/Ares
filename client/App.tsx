@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button } from "../src";
+// @ts-ignore
+import { Button } from "@mihaidima/ares";
 
 export default () => (
     <div>
