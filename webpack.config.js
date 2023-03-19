@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     resolve: {
-        extensions: ['.ts', '.js', '.json', '.tsx']
+        extensions: ['.ts', '.js', '.json', '.tsx', '.css', '.sass', '.less']
     },
     entry: './src/index.ts',
     module: {
@@ -13,7 +13,16 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                 }
-            }
+            },
+            {
+                test: /\.css$/i,
+                exclude: /(node_modules | src)/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "css-modules-typescript-loader"
+                ],
+            },
         ]
     },
     output: {
