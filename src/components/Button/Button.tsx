@@ -5,7 +5,7 @@ export interface ButtonProps {
     onClick?: MouseEventHandler
 }
 
-const Button = (props: ButtonProps) => {
+const Button: React.FC<ButtonProps> = (props) => {
     return (
         <button onClick={props.onClick}>
             {props.label}
