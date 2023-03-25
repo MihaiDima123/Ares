@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledPrimaryButton = styled.button`
-  font-family: 'Roboto', fantasy;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   padding: 10px 20px;
   color: #fff;
