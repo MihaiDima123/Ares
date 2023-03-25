@@ -20,6 +20,5 @@ jobs:
           git config --global user.email github-actions@github.com
           git config --global user.name github-actions
       - run: npm version patch
-      - run: git push origin main
 
       - run: git push origin $(git describe --tags --abbrev=0)
