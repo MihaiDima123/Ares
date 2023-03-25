@@ -1,4 +1,4 @@
-name: Create tag release
+name: Create minor release
 on: workflow_dispatch
 jobs:
   create-tag:

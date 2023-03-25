@@ -1,0 +1,19 @@
+name: Create patch release
+on: workflow_dispatch
+jobs:
+  create-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+
+      - uses: ./.github/actions/create-release
+        with:
+          version: "patch"
+
