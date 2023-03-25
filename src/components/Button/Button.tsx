@@ -1,4 +1,5 @@
 import React, { MouseEventHandler } from "react";
+import "./Button.css";
 
 export interface ButtonProps {
     label?: string;
@@ -7,7 +8,9 @@ export interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = (props) => {
     return (
-        <button onClick={props.onClick}>
+        <button className={"ares-button"}
+                onClick={props.onClick}
+        >
             {props.label}
         </button>
     );
