@@ -16,11 +16,10 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                exclude: /(node_modules | src)/,
+                exclude: /(node_modules | client)/,
                 use: [
                     "style-loader",
-                    "css-loader",
-                    "css-modules-typescript-loader"
+                    "css-loader"
                 ],
             },
         ]

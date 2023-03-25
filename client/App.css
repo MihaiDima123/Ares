@@ -7,3 +7,9 @@
 body {
     font-family: sans-serif;
 }
+
+.component-select {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+}
