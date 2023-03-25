@@ -8,7 +8,9 @@
     "dist"
   ],
   "scripts": {
-    "start": "webpack serve --mode production --config client/webpack.config.client.js"
+    "start": "webpack serve --mode production --config client/webpack.config.client.js",
+    "build": "webpack --mode=production",
+    "build-js": "tsc"
   },
   "author": "Mihai Dima",
   "license": "ISC",
