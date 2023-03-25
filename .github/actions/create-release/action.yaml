@@ -21,17 +21,9 @@ runs:
           git config --global user.email github-actions@github.com
           git config --global user.name github-actions
 
-    - if: ${{ inputs.version }} == "patch"
+    - name: Add to version
       shell: bash
-      run: npm version patch
-
-    - if: ${{ inputs.version }} == "minor"
-      shell: bash
-      run: npm version minor
-
-    - if: ${{ inputs.version }} == "major"
-      shell: bash
-      run: npm version major
+      run: npm version ${{ inputs.version }}
 
     - name: Push new version to main
       shell: bash
