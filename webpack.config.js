@@ -15,13 +15,17 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/i,
+                test: /\.(scss|css|sass)$/i,
                 exclude: /(node_modules | client)/,
                 use: [
                     "style-loader",
                     "css-loader"
                 ],
             },
+            {
+                test: /\.(eot|woff|woff2|svg|ttf|OTF)([\?]?.*)$/,
+                use: ['file-loader']
+            }
         ]
     },
     output: {
