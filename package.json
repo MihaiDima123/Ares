@@ -1,6 +1,6 @@
 {
   "name": "@mihaidima/ares",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "description": "A nice component library -_*",
   "main": "dist/bundle.js",
   "types": "dist/index.d.ts",
