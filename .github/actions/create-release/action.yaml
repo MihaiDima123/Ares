@@ -1,4 +1,5 @@
 name: Tag release
+description: Releases a tag and updates the version to main
 
 inputs:
   version:
@@ -14,23 +15,31 @@ runs:
         node-version: '16.x'
         registry-url: 'https://registry.npmjs.org'
 
-    - name: Set Github Crdentials
+    - name: Set Github Credentials
+      shell: bash
       run: |
           git config --global user.email github-actions@github.com
           git config --global user.name github-actions
 
     - name: Release patch
+      shell: bash
       if: version == "patch"
       run: npm version patch
 
     - name: Release minor
+      shell: bash
       if: version == "minor"
       run: npm version minor
 
     - name: Release major
+      shell: bash
       if: version == "major"
       run: npm version major
 
-    - run: git push origin main
+    - name: Push new version to main
+      shell: bash
+      run: git push origin main
 
-    - run: git push origin $(git describe --tags --abbrev=0)
+    - name: Push new tag
+      shell: bash
+      run: git push origin $(git describe --tags --abbrev=0)
