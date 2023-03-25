@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledPrimaryButton = styled.button`
-  font-family: "Myriad Pro Regular", sans-serif;
+  font-family: "OpenSans", sans-serif;
   font-size: 16px;
   padding: 10px 20px;
   color: #fff;

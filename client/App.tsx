@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import PageWrapper from "./misc/PageWrapper"
 import Components from "./Components";
 import "./App.css";
+import "@mihaidima/ares/dist/main.css";
 
 const Entries = Object.entries(Components);
 

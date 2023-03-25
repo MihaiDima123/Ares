@@ -1,6 +1,6 @@
 import {
     Button
-} from "../src";
+} from "@mihaidima/ares";
 import React from "react";
 
 export default {
