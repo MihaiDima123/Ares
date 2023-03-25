@@ -1,4 +1,4 @@
-name: Publish Package to npmjs
+name: Create tag release
 on: workflow_dispatch
 jobs:
   create-tag:
