@@ -13,10 +13,7 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
 
-      - run: |
-          git config --global user.email github-actions@github.com
-          git config --global user.name github-actions
-      - run: npm version patch
-      - run: git push origin main
+      - uses: .github/actions/create-release.yaml
+        with:
+          version: "minor"
 
-      - run: git push origin $(git describe --tags --abbrev=0)

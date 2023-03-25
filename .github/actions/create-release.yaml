@@ -1,0 +1,36 @@
+name: Tag release
+
+inputs:
+  version:
+    description: 'Version type'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16.x'
+        registry-url: 'https://registry.npmjs.org'
+
+    - name: Set Github Crdentials
+      run: |
+          git config --global user.email github-actions@github.com
+          git config --global user.name github-actions
+
+    - name: Release patch
+      if: version == "patch"
+      run: npm version patch
+
+    - name: Release minor
+      if: version == "minor"
+      run: npm version minor
+
+    - name: Release major
+      if: version == "major"
+      run: npm version major
+
+    - run: git push origin main
+
+    - run: git push origin $(git describe --tags --abbrev=0)
