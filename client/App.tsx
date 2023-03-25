@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import PageWrapper from "./misc/PageWrapper"
 import Components from "./Components";
 import "./App.css";
-import "../src/index.css";
+import { GlobalStyle } from "../src";
 
 const Entries = Object.entries(Components);
 
@@ -15,6 +15,7 @@ export default () => {
     const props = Components[selected].props || {};
     return (
         <React.Fragment>
+            <GlobalStyle />
             <PageWrapper>
                 <select className={"component-select"}
                         onChange={(e) => setSelected(e.target.value)
