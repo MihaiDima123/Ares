@@ -1,5 +1,7 @@
 import React, { MouseEventHandler } from "react";
-import "./Button.css";
+import {
+    StyledPrimaryButton
+} from "./Button.styles";
 
 export interface ButtonProps {
     label?: string;
@@ -8,11 +10,11 @@ export interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = (props) => {
     return (
-        <button className={"ares-button"}
+        <StyledPrimaryButton
                 onClick={props.onClick}
         >
             {props.label}
-        </button>
+        </StyledPrimaryButton>
     );
 };
 

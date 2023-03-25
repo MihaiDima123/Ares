@@ -29,5 +29,9 @@ module.exports = {
         filename: 'bundle.js',
         library: "ares",
         libraryTarget: "umd"
+    },
+    externals: {
+        react: 'react',
+        reactDOM: 'react-dom'
     }
 };
