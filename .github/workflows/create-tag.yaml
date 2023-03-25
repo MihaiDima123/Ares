@@ -1,8 +1,5 @@
 name: Publish Package to npmjs
-on:
-  push:
-    branch:
-      - "main"
+on: workflow_dispatch
 jobs:
   create-tag:
     runs-on: ubuntu-latest
