@@ -13,7 +13,7 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
 
-      - uses: .github/actions/create-release.yaml
+      - uses: MihaiDima123/Ares/.github/actions/create-release.yaml
         with:
           version: "minor"
 
