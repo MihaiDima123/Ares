@@ -42,7 +42,8 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
         library: "ares",
-        libraryTarget: "umd"
+        libraryTarget: "umd",
+        globalObject: "this"
     },
     externals: {
         react: 'react',
