@@ -9,19 +9,9 @@ export interface SeparatorProps {
     style?: object
 }
 
-const Separator: React.FC<SeparatorProps> = ({
-    color,
-    width,
-    height,
-    className,
-    style
-}) => (
+const Separator: React.FC<SeparatorProps> = (props) => (
     <SeparatorWrapperStyled
-        color={color}
-        width={width}
-        height={height}
-        className={className}
-        style={style}
+        {...props}
     />
 )
 
