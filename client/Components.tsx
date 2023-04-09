@@ -1,5 +1,5 @@
 import {
-    Button
+    Button, Separator
 } from "../src";
 import React from "react";
 
@@ -9,6 +9,11 @@ export default {
         props: {
             label: "Button",
             onClick: () => console.log("clicked")
+        }
+    },
+    separator: {
+        component: Separator,
+        props: {
         }
     }
 }
